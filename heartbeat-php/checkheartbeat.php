@@ -275,11 +275,14 @@ if (isset($_GET['format']) && $_GET['format'] == 'json') {
         <?php endforeach; ?>
 
     </table>
+<?php
+$now = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+?>
 
-    <div class="footer">
-        Last Checked:
-        <strong><?= date("Y-m-d H:i:s") ?></strong>
-    </div>
+<div class="footer">
+    Last Checked:
+    <strong><?= $now->format('Y-m-d H:i:s') ?> IST</strong>
+</div>
 
 </body>
 
